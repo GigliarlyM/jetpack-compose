@@ -64,8 +64,9 @@ fun MainScreen() {
 
 @Composable
 fun HelloContent() {
-    Column(modifier = Modifier.padding(16.dp)) {
+    Column(modifier = Modifier.padding(20.dp)) {
         var name by remember { mutableStateOf("") }
+
         if (name.isNotEmpty()) {
             Text(
                 text = "Hello, $name!",
@@ -73,6 +74,7 @@ fun HelloContent() {
                 style = MaterialTheme.typography.h5
             )
         }
+
         OutlinedTextField(
             value = name,
             onValueChange = {
@@ -87,7 +89,7 @@ fun HelloContent() {
 
 @Composable
 fun ClickCounter(clicks: Int, onClick: () -> Unit) {
-    Button(onClick = onClick) {
+    Button(onClick = onClick, modifier = Modifier.fillMaxWidth()) {
         Text("I've been clicked $clicks times")
     }
 }

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Compose</string>
+    <string name="title_activity_list_person">ListPersonActivity</string>
 </resources>

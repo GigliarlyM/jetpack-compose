@@ -15,6 +15,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import br.com.dio.compose.ui.theme.ComposeTheme
 
@@ -41,7 +42,12 @@ data class Person(
 
 @Composable
 fun ListScreen() {
-    val personList = listOf(Person("Ezequiel"), Person("Igor"), Person("Pedro"), Person("Venilton"))
+    val personList = listOf(
+        Person("Ezequiel"),
+        Person("Igor"),
+        Person("Pedro"),
+        Person("Venilton")
+    )
 
     LazyColumn(
         modifier = Modifier.background(Color.Magenta),
@@ -57,4 +63,10 @@ fun ListScreen() {
 @Composable
 fun ItemList(name: String) {
     Text(text = name, modifier = Modifier.background(Color.Green))
+}
+
+@Composable
+@Preview(showBackground = true)
+fun ListScreenPreview() {
+    ListScreen()
 }
